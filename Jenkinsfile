@@ -1,6 +1,11 @@
 pipeline{
         agent any
         stages{
+                stage('Remove previous'){
+                        steps{
+                                sh "rm -rf chaperootodo_client"
+                        }
+                }   
             stage('Clone'){
                 steps{
                         sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"
