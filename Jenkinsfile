@@ -8,7 +8,7 @@ pipeline{
             }
             stage('Install Docker/Compose'){
                 steps{
-                        sh '''sudo apt-get update
+                        sh '''sudo apt update
                         sudo apt install curl -y
                         curl https://get.docker.com | sudo bash
                         sudo apt install -y curl jq
